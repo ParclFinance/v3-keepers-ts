@@ -1,0 +1,47 @@
+{
+  "name": "v3-keepers-ts",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "clean": "rm -rf ./dist",
+    "prepublishOnly": "yarn build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "dependencies": {
+    "@parcl-oss/v3-sdk": "0.0.0",
+    "@pythnetwork/client": "^2.19.0",
+    "@solana/spl-token": "^0.3.11",
+    "@solana/web3.js": "^1.89.0",
+    "bs58": "^5.0.0",
+    "decimal.js": "^10.4.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.5",
+    "@types/bs58": "^4.0.4",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "engines": {
+    "node": ">=14"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": false,
+    "explicitTypes": "always",
+    "bracketSpacing": true,
+    "trailingComma": "es5"
+  }
+}
