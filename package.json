@@ -6,24 +6,38 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "clean": "rm -rf ./dist",
     "prepublishOnly": "yarn build",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prettier": "prettier --config .prettierrc --write .",
+    "start": "node --max-old-space-size=16384 --max-semi-space-size=256 --trace-warnings ./dist/esm/bin/my-liquidator.js"
   },
   "dependencies": {
+    "@datastructures-js/priority-queue": "^6.3.1",
+    "@datastructures-js/queue": "^4.2.3",
     "@parcl-oss/v3-sdk": "0.0.0",
     "@pythnetwork/client": "^2.19.0",
     "@solana/spl-token": "^0.3.11",
     "@solana/web3.js": "^1.89.0",
+    "agentkeepalive": "^4.5.0",
     "bs58": "^5.0.0",
+    "convict": "^6.2.4",
+    "csv-stringify": "^6.4.6",
     "decimal.js": "^10.4.3",
-    "dotenv": "^16.3.1"
+    "default-import": "^1.1.5",
+    "dotenv": "^16.3.1",
+    "jito-ts": "^3.0.1",
+    "node-fetch": "^3.3.2",
+    "pino": "^8.20.0"
   },
   "devDependencies": {
     "@types/bn.js": "^5.1.5",
     "@types/bs58": "^4.0.4",
+    "@types/convict": "^6.1.6",
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
     "eslint": "^8.56.0",
+    "pino-pretty": "^11.0.0",
+    "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
@@ -34,14 +48,5 @@
   "module": "./dist/esm/index.js",
   "engines": {
     "node": ">=14"
-  },
-  "prettier": {
-    "printWidth": 100,
-    "tabWidth": 2,
-    "useTabs": false,
-    "singleQuote": false,
-    "explicitTypes": "always",
-    "bracketSpacing": true,
-    "trailingComma": "es5"
   }
 }

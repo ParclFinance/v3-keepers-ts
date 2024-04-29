@@ -22,7 +22,9 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true /* Allow 'import x from y' when a module doesn't have a default export. */,
+    "strictNullChecks": false /* When type checking, take into account 'null' and 'undefined'. */,
   },
   "include": ["src"]
 }
