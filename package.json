@@ -6,7 +6,8 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "clean": "rm -rf ./dist",
     "prepublishOnly": "yarn build",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "mocha -r ts-node/register 'test/**/*.ts'"
   },
   "dependencies": {
     "@parcl-oss/v3-sdk": "0.0.0",
@@ -15,15 +16,20 @@
     "@solana/web3.js": "^1.89.0",
     "bs58": "^5.0.0",
     "decimal.js": "^10.4.3",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "nodejs-polars": "^0.13.0"
   },
   "devDependencies": {
     "@types/bn.js": "^5.1.5",
     "@types/bs58": "^4.0.4",
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
+    "chai": "^5.1.1",
     "eslint": "^8.56.0",
+    "mocha": "^10.6.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
