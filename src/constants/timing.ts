@@ -1,0 +1,1 @@
+export const EXCHANGE_UPDATE = 86_400_000;

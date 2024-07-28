@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ES6",
     "module": "CommonJS",
     "allowJs": false,
     "declaration": true,
@@ -11,7 +11,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "typeRoots": ["node_modules/@types"],
     "experimentalDecorators": true,
     "importHelpers": true,
@@ -24,5 +24,6 @@
     "noUnusedParameters": true,
     "noImplicitAny": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "esm": true
 }
