@@ -13,6 +13,40 @@ These example keepers are in alpha. Keepers may contain bugs.
 
 Pull requests welcome. Please reach out in the discord dev channel with any questions.
 
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/ParclFinance/v3-keepers-ts.git
+   cd v3-keepers-ts
+   ```
+
+2. Install Bun globally (if not already installed):
+   ```
+   npm i -g bun
+   ```
+
+3. Install dependencies:
+   ```
+   bun install
+   ```
+
+4. Set up your environment variables:
+   - Copy the `.env.example` file to `.env`
+   - Fill in the required values in the `.env` file
+
+## Usage
+
+To start the liquidator bot:
+
+```
+bun liquid
+```
+
+This command will run the liquidator bot, which will monitor margin accounts for liquidatable positions and attempt to liquidate them when found.
+
+Note: Ensure you have properly configured your `.env` file with the necessary credentials and settings before running the bot.
+
 ## Keepers
 
 | Keeper Name | Info                                                                                                                                                                                                                                                                             |

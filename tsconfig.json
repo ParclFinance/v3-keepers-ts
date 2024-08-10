@@ -1,28 +1,40 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "CommonJS",
+    "module": "esnext",
     "allowJs": false,
     "declaration": true,
     "declarationMap": true,
-    "lib": ["dom", "es6"],
+    "allowImportingTsExtensions": true,
+    "lib": ["dom", "es6", "esnext"],
     "strict": true,
     "esModuleInterop": true,
+    "emitDeclarationOnly": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
     "typeRoots": ["node_modules/@types"],
     "experimentalDecorators": true,
     "importHelpers": true,
     "sourceMap": true,
-    "rootDir": "src",
+    "rootDir": ".",
     "outDir": "dist/esm",
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "baseUrl": "./src" /* Specify the base directory to resolve non-relative module names. */,
+    "paths": {
+      "@/*": ["./*"],
+      "@utils/*": ["./utils/*"],
+      "@workers/*": ["./workers/*"]
+    } /* Specify a set of entries that re-map imports to additional lookup locations. */
+    // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
+    // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
   },
-  "include": ["src"]
+  "include": ["src"],
+  "types": ["bun-types"]
 }
