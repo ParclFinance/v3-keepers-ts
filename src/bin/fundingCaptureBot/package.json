@@ -1,0 +1,17 @@
+{
+  "name": "prclbot",
+  "module": "./src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "../../temp/v3-sdk-ts/src": "^0.0.4",
+    "@types/luxon": "^3.4.2",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.5"
+  }
+}
