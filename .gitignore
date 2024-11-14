@@ -29,3 +29,6 @@ yarn-error.log*
 
 #visual-studio-code
 .vscode/
+
+#JetBrains
+.idea

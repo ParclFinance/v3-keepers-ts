@@ -150,7 +150,7 @@ async function runLiquidator({
   }
 }
 
-async function getMarketMapAndPriceFeedMap(
+export async function getMarketMapAndPriceFeedMap(
   sdk: ParclV3Sdk,
   allMarkets: (ProgramAccount<Market> | undefined)[]
 ): Promise<[MarketMap, PriceFeedMap]> {
