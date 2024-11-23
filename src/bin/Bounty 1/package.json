@@ -1,0 +1,22 @@
+{
+  "name": "bounty-1",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": { "start": "bun run src/index.ts" },
+  "dependencies": {
+    "@metaplex-foundation/umi": "^0.9.2",
+    "@pythnetwork/client": "^2.22.0",
+    "@pythnetwork/pyth-solana-receiver": "^0.8.2",
+    "@solana/web3.js": "^1.95.4",
+    "bounty-1": ".",
+    "bs58": "^6.0.0",
+    "decimal.js": "^10.4.3",
+    "header-generator": "^2.1.57"
+  }
+}
